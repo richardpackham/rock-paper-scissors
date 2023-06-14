@@ -7,56 +7,68 @@ function getComputerChoice(){
 
 function playerSelection(){
     let choice = prompt("rock paper or scissors","rock");
-    choice = choice.tolower
-    validatePlayerSelection(choice);
+    choice = choice.toLowerCase()
+    validatePlayerSelection(choice)
+    return choice;
 }
 
 function validatePlayerSelection(choice){
-    if (choice != "rock"|| choice != "paper" || choice != "scissors"){
+    if (choice == "rock"|| choice == "paper" || choice == "scissors"){
+        return choice;
+    }
+    else {
         playerSelection();
         return;
     }
-    else {
-        return choice;
-    }
 }
 
-// Rock beats scissors 
-// scissors beats paper
-// paper beats rock 
+function winHandler(winner,winnerChoice,loserChoice){
+     alertMsg(Winner + "Wins "+ winnerChoice + " beats " + loserChoice );
+     return;
+}
 
 function alertMsg(message){
     alert(message);
+    return;
 }
 
-function playRound(computerChoice,playerChoice){
+function playRound(){
+    let computerChoice = getComputerChoice();
+    let playerChoice = playerSelection();
     if (computerChoice == playerChoice ){
         alertMsg("Draw")
     }
-    else if (computerChoice == "rock"){
-        if (playerChoice == "scissors"){
-            alertMsg("You lose! Rock beats Scissors")
-        }
-        else {
-            alertMsg("You win! Paper beats Rock!") 
-        }
+    // handle player wins 
+    // Rock beats scissors 
+    // scissors beats paper
+    // paper beats rock 
+    else if (playerChoice == "rock" && computerChoice == "scissors" ||
+             playerChoice == "scissors" && computerChoice == "paper" || 
+             playerChoice == "paper" && computerChoice =="rock"){
+                winner = "player";
+                winHandler(winner,playerChoice,computerChoice);
+                return (winner);
+             }
+    // handle comp wins 
+    else {
+       winner = "computer";
+       winHandler(winner,computerChoice,playerChoice);
+       return (winner);
     }
-    else if (computerChoice == "scissors"){
-        if (playerChoice == "rock") {
-            alertMsg("You Win! Rock beats Scissors")
-        }
-        else {
-            alertMsg("You Lose! Scissors beats Paper!") 
-        }
-    }
-    else if (computerChoice == "paper" ){
-        if (playerChoice== "rock"){
-            alertMsg("You Lose! Paper beats Rock!") 
-        }
-        else {
-            alertMsg("You Win! Scissors beats Paper!") 
-    }
-}
 }
 
-playRound(getComputerChoice(),playerSelection())
+function game(rounds){
+    let playerWins = 0
+    let computerWins = 0
+    for (let i=1; i< rounds; i++){
+        let winner = playRound();
+        if (winner == "player"){
+            playerWins += 1;
+         }
+         else if (winner=="computer"){
+            computerWins += 1;
+         }
+    }
+}
+
+game(5)
