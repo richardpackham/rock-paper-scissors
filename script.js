@@ -23,7 +23,7 @@ function validatePlayerSelection(choice){
 }
 
 function winHandler(winner,winnerChoice,loserChoice){
-     alertMsg(Winner + "Wins "+ winnerChoice + " beats " + loserChoice );
+     alertMsg(winner + "Wins "+ winnerChoice + " beats " + loserChoice );
      return;
 }
 
@@ -60,7 +60,7 @@ function playRound(){
 function game(rounds){
     let playerWins = 0
     let computerWins = 0
-    for (let i=1; i< rounds; i++){
+    for (let i=0; i< rounds; i++){
         let winner = playRound();
         if (winner == "player"){
             playerWins += 1;
@@ -69,6 +69,14 @@ function game(rounds){
             computerWins += 1;
          }
     }
+    if (playerWins > computerWins) {
+        return alertMsg("You won")
+    }
+    else {
+        return alertMsg("Computer Won")
+    }
 }
 
-game(5)
+let games= parseInt(prompt("How many rounds?",3))
+
+game(games)
