@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+h1, h2, h3 {
+    font-family: 'Rubik Mono One'
+}
+h4{
+    font-family: 'Rubik Mono One';
+    font-size: 1.3em;
+    font-weight:200;
+}
+button {
+    border:solid;
+    border-radius:4px;
+    padding:10px;
+    border-color:navy;
+    background-color: blueviolet;
+    color:white;
+    font-size:1.2em;
+    font-weight: 400;
+    font-family: 'Rubik Mono One'
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+
+}
+
+/* #buttons {
+    display: flex
+} */
+
+#game{
+    background-color:transparent;
+    padding:30px;
+    width:700px;
+    min-height: 500px;
+    display:flex;
+    flex-direction:row;
+    align-items: space-between;
+    max-height:500px;
+}
+#left{
+    display:flex;
+    flex-direction: column;
+    background-color:#39FF14;
+    min-height: 100%;
+    padding:20px;
+    width:400px;
+}
+#results{
+    background-color: #ff5da2;
+    width:150px;
+    min-height:100%;
+    padding:0px;
+    display:flex;
+    flex-direction: column;
+}
+
+.scores{
+    min-width:100%;
+    min-height:50%;
+}
+
+#player{
+    background-color: aqua;
+    padding:20px;
+}
+
+#computer{
+    padding:20px
+}
+
+.scores p{
+    font-size:56px;
+    font-family: 'Rubik Mono One'
+}

@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=rubik">
 </head>
 <body>
-    <div id="buttons">
-        <button id="rock"> Rock </button>
-        <button id="paper"> Paper </button>
-        <button id="scissors"> Scissor </button>
-    </div>
-    <div id="results"> 
-        <p id="playerScore"></p>
-        <p id="computerScore"></p>
-        <h3 id="lastRound"></h3>
+    <div id="game">
+        <div id="left">
+            <h1> Rock <br>Paper<br> Scissors</h1>
+            <div id="buttons">
+                <button id="rock"> Rock </button>
+                <button id="paper"> Paper </button>
+                <button id="scissors"> Scissors </button>
+            </div>
+            <h4 id="lastRound"></h4>
+        </div>
+        <div id="results"> 
+            <div class="scores" id="player">
+                <h3>Player</h3>
+                <p id="playerScore">0</p>
+            </div>
+            <div class="scores" id="computer">
+                <h3>Comp</h3>
+                <p id="computerScore">0</p>
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>
