@@ -18,7 +18,8 @@ button {
     color:white;
     font-size:1.2em;
     font-weight: 400;
-    font-family: 'Rubik Mono One'
+    font-family: 'Rubik Mono One';
+    margin:2px;
 }
 
 body{
@@ -51,10 +52,9 @@ body{
     background-color:#39FF14;
     min-height: 100%;
     padding:20px;
-    width:400px;
+    width:420px;
 }
 #results{
-    background-color: #ff5da2;
     width:150px;
     min-height:100%;
     padding:0px;
@@ -73,10 +73,30 @@ body{
 }
 
 #computer{
-    padding:20px
+    padding:20px;
+    background-color: #ff5da2;
 }
 
 .scores p{
     font-size:56px;
     font-family: 'Rubik Mono One'
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #game{
+        flex-direction: column;
+        height:90%
+    }
+    #results{
+        flex-direction: row;
+        width:50%;
+        height:100px
+    }
+    #left{
+        width:100%;
+    }
+    .scores{
+        height:100px;
+    }
+  }
