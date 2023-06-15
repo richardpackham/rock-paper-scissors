@@ -66,9 +66,9 @@ function playRound(playerChoice){
 
 function paintResults(){
     playerScore = document.querySelector("#playerScore");
-    playerScore.innerText = "Player: " + playerWins;
+    playerScore.innerText = playerWins;
     computerScore = document.querySelector("#computerScore")
-    computerScore.innerText = "Computer: " + computerWins
+    computerScore.innerText = computerWins
 }
 
 function scorer(winner){
