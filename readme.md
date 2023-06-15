@@ -4,4 +4,4 @@ Rock paper scissors game built as part of The Odin Projects foundation curriculu
 
 https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
 
-To play rock paper scissors - visit the following link
+To play rock paper scissors - visit the following link https://richardpackham.github.io/rock-paper-scissors/
